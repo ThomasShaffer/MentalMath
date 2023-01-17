@@ -1,7 +1,6 @@
-package com.edtech.mentalmath.Entity;
+package com.edtech.mentalmath.Entity.model;
 
 import lombok.Data;
-
 import javax.persistence.*;
 import java.util.List;
 

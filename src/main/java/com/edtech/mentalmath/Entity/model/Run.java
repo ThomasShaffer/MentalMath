@@ -1,7 +1,6 @@
-package com.edtech.mentalmath.Entity;
+package com.edtech.mentalmath.Entity.model;
 
 import lombok.Data;
-
 import javax.persistence.*;
 
 @Entity
@@ -16,11 +15,12 @@ public class Run {
     @ManyToOne
     private Runs runs;
 
-    @Column(nullable = false)
+    @Column(nullable=false)
     private String digits;
 
-    @Column(nullable = false)
+    @Column(nullable=false)
     private boolean correct;
 
-
+    @Column(nullable=false)
+    private float timeElapsed;
 }
