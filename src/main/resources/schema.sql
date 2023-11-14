@@ -1,8 +1,17 @@
 DROP TABLE IF EXISTS users CASCADE;
-DROP TABLE IF EXISTS user_runs CASCADE;
 DROP TABLE IF EXISTS run CASCADE;
 
 
-CREATE TABLE users (id INT AUTO_INCREMENT, user_name VARCHAR(50), user_password VARCHAR(50), runs INT);
-CREATE TABLE user_runs (id INT AUTO_INCREMENT, run_user INT, run INT);
-CREATE TABLE run (id INT AUTO_INCREMENT, runs INT, digits VARCHAR(50), correct BOOLEAN, time_elapsed FLOAT);
+CREATE TABLE users (
+    id BIGINT AUTO_INCREMENT,
+    userName VARCHAR(50),
+    userPassword VARCHAR(50));
+
+CREATE TABLE run (
+    runId BIGINT AUTO_INCREMENT,
+    userId BIGINT,
+    category VARCHAR(50),
+    firstDigit BIGINT,
+    secondDigit BIGINT,
+    correct BOOLEAN,
+    timeElapsed FLOAT);

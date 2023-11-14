@@ -15,20 +15,17 @@ import javax.persistence.*;
 public class User {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
     private Long id;
 
     @Column(nullable=false, unique=true)
-    private String user_name;
+    private String userName;
 
     @Column(nullable=false, unique=false)
-    private String user_password;
-
-    @JoinColumn(name="runs")
-    private Long runs;
+    private String userPassword;
 
     public User(String username, String password) {
-        this.user_name = username;
-        this.user_password = password;
+        this.userName = username;
+        this.userPassword = password;
     }
 }
